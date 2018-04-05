@@ -191,31 +191,17 @@
           <span class="custom-control-indicator"></span>
           <span class="custom-control-description">Modo encaixado</span>
         </label>
-        <label class="custom-control custom-checkbox">
-          <input class="custom-control-input" name="radio-stacked" type="radio" value="over" [(ngModel)]="_mode" (change)="isOpened = true; mode = _mode">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description">Modo de conteúdo</span>
-        </label>
-
-      </div>
-
-      <div class="d-flex align-items-center mb-2">
-        <label class="custom-control custom-checkbox mb-2">
-          <input type="checkbox" class="custom-control-input" [ngModel]="options?.removeFooter" (ngModelChange)="options.removeFooter=$event">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description">Remover rodapé</span>
-        </label>
       </div>
 
       <small class="ff-headers text-uppercase mb-3"><strong>Temas</strong></small>
       <div class="custom-controls-stacked mb-2">
         <label class="custom-control custom-checkbox">
-          <input class="custom-control-input" name="radio-stacked" type="radio" value="light" [(ngModel)]="theme">
+          <input class="custom-control-input" name="radio-stacked2" type="radio" value="light" [(ngModel)]="theme">
           <span class="custom-control-indicator"></span>
           <span class="custom-control-description">Claro</span>
         </label>
         <label class="custom-control custom-checkbox">
-          <input class="custom-control-input" name="radio-stacked" type="radio" value="dark" [(ngModel)]="theme">
+          <input class="custom-control-input" name="radio-stacked2" type="radio" value="dark" [(ngModel)]="theme">
           <span class="custom-control-indicator"></span>
           <span class="custom-control-description">Escuro</span>
         </label>
