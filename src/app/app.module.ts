@@ -14,7 +14,6 @@ import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth/auth-layout.component';
-import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './administracao/home/home.component';
 
 export function createTranslateLoader(http: Http) {
@@ -31,7 +30,6 @@ export function createTranslateLoader(http: Http) {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    SharedModule,
     RouterModule.forRoot(AppRoutes),
     FormsModule,
     HttpModule,
