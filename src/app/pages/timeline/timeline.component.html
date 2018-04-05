@@ -1,0 +1,67 @@
+<ul class="timeline" [ngClass]="{'stacked': stacked}">
+  <li class="timeline-card timeline-button">
+    <button class="btn btn-secondary" [ngClass]="{'active': !stacked}" (click)="stacked = !stacked">Toggle</button>
+  </li>
+  <li class="timeline-card">
+    <div class="timeline-icon bg-grey"></div>
+    <section class="timeline-content">
+      <div class="card">
+        <div class="card-block">
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.</p>
+        </div>
+      </div>
+      <div class="timeline-date">13:12 am</div>
+    </section>
+  </li>
+  <li class="timeline-card">
+    <div class="timeline-icon bg-purple"></div>
+    <section class="timeline-content">
+      <div class="card">
+        <div class="card-block">
+          <p class="mb-0">Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+        </div>
+      </div>
+      <div class="timeline-date">Yesterday</div>
+    </section>
+  </li>
+  <li class="timeline-card timeline-button">
+    <button class="btn btn-danger">2016</button>
+  </li>
+  <li class="timeline-card timeline-button"></li>
+  <li class="timeline-card">
+    <div class="timeline-icon bg-green"></div>
+    <section class="timeline-content">
+      <div class="card">
+        <div class="card-block">
+          <p class="mb-0"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="timeline-date">6 Days Ago</div>
+    </section>
+  </li>
+  <li class="timeline-card">
+    <div class="timeline-icon bg-lime"></div>
+    <section class="timeline-content">
+      <div class="card">
+        <div class="card-block">
+          <p class="mb-0">3 more people joined your campaign.</p>
+        </div>
+      </div>
+      <div class="timeline-date">2 Months Ago</div>
+    </section>
+  </li>
+  <li class="timeline-card">
+    <div class="timeline-icon bg-brown"></div>
+    <section class="timeline-content">
+      <div class="card">
+        <div class="card-block">
+          <p class="mb-0">Six new friend requests</p>
+        </div>
+      </div>
+      <div class="timeline-date">23 September 2013</div>
+    </section>
+  </li>
+  <li class="timeline-card timeline-button">
+    <button class="btn btn-secondary">2015</button>
+  </li>
+</ul>

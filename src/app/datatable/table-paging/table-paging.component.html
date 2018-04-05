@@ -1,0 +1,13 @@
+<ngx-datatable
+  [rows]="rows"
+  [columns]="[{name:'Name'},{name:'Gender'},{name:'Company'}]"
+  [columnMode]="'force'"
+  [headerHeight]="40"
+  [footerHeight]="50"
+  [rowHeight]="'auto'"
+  [externalPaging]="true"
+  [count]="count"
+  [offset]="offset"
+  [limit]="limit"
+  (page)='onPage($event)'>
+</ngx-datatable>

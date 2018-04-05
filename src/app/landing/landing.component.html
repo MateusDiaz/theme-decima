@@ -1,0 +1,208 @@
+<header class="bg-primary text-white">
+  <div class="container">
+    <nav class="navbar custom-navbar landing-header no-shadow">
+      <a class="navbar-brand" [routerLink]="['/landing']">
+        <img src="assets/images/logo.png" class="navbar-brand-logo" alt="">&nbsp;
+      </a>
+      <ul class="navbar-nav mr-auto hidden-sm-down">
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/']">Demo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="goToFeatures()">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://themeforest.net/user/iamnyasha?ref=iamnyasha" target="_blank">Support</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/docs']">Documentation</a>
+        </li>
+      </ul>
+      <span class="mr-auto hidden-md-up"></span>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://themeforest.net/user/iamnyasha/portfolio?ref=iamnyasha" target="_blank">
+            <span class="btn btn-secondary border-0">Buy on Themeforest</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-banner">
+      <h1><span class="fw-900">Decima -</span> <i class="fw-300 ff-serif">Angular Admin Template</i></h1>
+      <p>A creative Bootstrap 4 admin template built with Angular.<br/> It comes out of the box with different colour schemes and lots of other <br/>reusable UI elements and widgets.</p>
+      <a [routerLink]="['/']" class="btn btn-secondary border-0">View the demo</a>
+    </div>
+  </div>
+</header>
+
+<div class="header-flot-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 m-0">
+        <div class="feature-content">
+          <h6 class="feature-title">Bootstrap 4</h6>
+          <p class="mb-0">The most popular framework for developing web projects.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 m-0">
+        <div class="feature-content">
+          <h6 class="feature-title">angular-cli</h6>
+          <p class="mb-0">Makes it easy to create an application that already works, right out of the box.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 m-0">
+        <div class="feature-content">
+          <h6 class="feature-title">Typescript</h6>
+          <p class="mb-0">A typed superset of JavaScript that compiles to plain JavaScript.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 m-0">
+        <div class="feature-content">
+          <h6 class="feature-title">GIT</h6>
+          <p class="mb-0">Grab the latest code and check log commits on updates.</p>
+        </div>
+      </div>     
+    </div>
+  </div>
+</div>
+
+<div class="landing-section">
+  <div class="container">
+    <div class="brands-wrapper d-flex align-items-center justify-content-between">
+      <div>
+        <img src="assets/images/logos/angular.png" alt="">
+      </div>
+      <div>
+        <img src="assets/images/logos/bootstrap.png" alt="">
+      </div>
+      <div>
+        <img src="assets/images/logos/typescript.png" alt="">
+      </div>
+      <div>
+        <img src="assets/images/logos/sass.png" alt="">
+      </div>
+      <div>
+        <img src="assets/images/logos/npm.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="landing-section" id="features">
+  <div class="container">
+    <div class="feature-showcase">
+      <div class="feature-showcase-media">
+        <div class="feature-showcase-bg bg-primary"></div>
+        <img src="assets/images/screen2.png">
+      </div>
+      <div class="feature-showcase-content">
+        <div class="feature-icon text-primary">
+          <i class="icon icon-basic-accelerator"></i>
+        </div>
+        <h6 class="feature-title">Ready to go</h6>
+        <p>Get a running start with plenty of ready made page samples. Some pages include email, taskboard, social, calendar and landing pages ready for you to start working on.</p>
+        <a [routerLink]="['/']" class="btn btn-primary">Go to template demo</a>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<div class="landing-section">
+  <div class="container">
+    <div class="feature-showcase align-right">
+      <div class="feature-showcase-media">
+        <div class="feature-showcase-bg bg-primary"></div>
+        <img src="assets/images/screen1.png">
+      </div>
+      <div class="feature-showcase-content">
+        <div class="feature-icon text-primary">
+          <i class="icon icon-basic-accelerator"></i>
+        </div>
+        <h6 class="feature-title">Easily customize</h6>
+        <p>Select your desired layouts from a selection of varied options and themes. Sidebar features push, docked, overlay and slide modes.</p>
+        <a [routerLink]="['/']" class="btn btn-primary">Go to template demo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="landing-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2 text-center">
+        <h2 class="ff-serif text-uppercase">Reviews for some of our products</h2>
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <blockquote class="blockquote">Great! Great looking, well organized, well architected and easy to customize. I've tried out a number of other templates, and this one just makes sense and works well.
+            <cite>- Customer</cite>
+            </blockquote>
+          </ng-template>
+          <ng-template ngbSlide>
+            <blockquote class="blockquote">Nice design, and most importantly it was implemented with best practices recommended by Angular 2, very reusable, maintainable, and easy to understand. I'm very impressed!!!<cite>- Customer</cite>
+            </blockquote>
+          </ng-template>
+          <ng-template ngbSlide>
+            <blockquote class="blockquote">Very neatly structured source code following ng4, MD, scss conventions which makes it one of the best ng4 based themes available. It hardly takes any time to understand the flow and get started with the fun.<cite>- Customer</cite>
+            </blockquote>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="landing-section bg-dark text-white">
+  <div class="container text-center">
+    <h3 class="ff-serif text-uppercase">Simple, fast, powerful.</h3>
+    <p>Grab your copy today. Exclusively on Themeforest!</p>
+    <a href="https://themeforest.net/user/iamnyasha/portfolio?ref=iamnyasha" class="btn btn-danger btn-lg" target="_blank">Purchase now!</a>
+  </div>
+</div>
+
+<footer class="landing-section footer">
+  <div class="container">
+    <div class="row m-b-1">
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="footer-widget">
+          <h6><img src="assets/images/logo.png" class="avatar-xs" alt=""></h6>
+          <small>&copy; 2016 <a href="https://themeforest.net/user/iamnyasha?ref=iamnyasha" target="_blank">iamnyasha</a></small><br/><small>Designed by <a href="https://themeforest.net/user/iamnyasha?ref=iamnyasha" target="_blank">iamnyasha</a></small>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="footer-widget">
+          <h6 class="footer-title">Product</h6>
+          <ul>
+            <li><a [routerLink]="['/']">Demo</a></li>
+            <li><a [routerLink]="['/docs']">Documentation</a></li>
+            <li><a (click)="goToFeatures()">Features</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="footer-widget">
+          <h6 class="footer-title">Tools</h6>
+          <ul>
+            <li><a href="https://cli.angular.io" target="_blank">angular-cli</a></li>
+            <li><a href="https://nodejs.org/en/" target="_blank">NodeJS</a></li>
+            <li><a href="https://angular.io/" target="_blank">Angular 4</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="footer-widget">
+          <h6 class="footer-title">Support</h6>
+          <ul>
+            <li><a href="https://themeforest.net/user/iamnyasha?ref=iamnyasha" target="_blank">Leave a comment</a></li>
+            <li><a href="https://themeforest.net/user/iamnyasha?ref=iamnyasha" target="_blank">Send an email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,194 @@
+<div class="row">
+  <div class="col-sm-12 col-md-12">
+    <div class="card">
+      <div class="card-header">Bubble chart</div>
+      <div class="card-block">
+        <div>
+          <ngx-charts-bubble-chart
+            class="chart-container"
+            [view]="view"
+            [results]="bubble"
+            [showGridLines]="showGridLines"
+            [legend]="false"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="false"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [autoScale]="autoScale"
+            [scheme]="colorScheme"
+            [schemeType]="schemeType"
+            [roundDomains]="roundDomains"
+            [tooltipDisabled]="tooltipDisabled"
+            [minRadius]="minRadius"
+            [maxRadius]="maxRadius">
+          </ngx-charts-bubble-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Heat map</div>
+      <div class="card-block">
+        <div>
+          <ngx-charts-heat-map
+            class="chart-container"
+            [scheme]="colorScheme"
+            [results]="multi"
+            [legend]="showLegend"
+            [gradient]="gradient"
+            (legendLabelClick)="onLegendLabelClick($event)"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [innerPadding]="innerPadding"
+            [tooltipDisabled]="tooltipDisabled"
+            (select)="select($event)">
+          </ngx-charts-heat-map>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Forced directed graph</div>
+      <div class="card-block">
+        <div>
+          <ngx-charts-force-directed-graph
+            class="chart-container"
+            [legend]="showLegend"
+            [links]="graph.links"
+            (legendLabelClick)="onLegendLabelClick($event)"
+            [nodes]="graph.nodes"
+            [scheme]="colorScheme"
+            [tooltipDisabled]="tooltipDisabled"
+            (select)="select($event)">
+          </ngx-charts-force-directed-graph>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-12">
+    <div class="card">
+      <div class="card-header">Heat map - Calendar</div>
+      <div class="card-block">
+        <div>
+          <ngx-charts-heat-map
+            class="chart-container"
+            [scheme]="colorScheme"
+            [results]="calendarData"
+            [legend]="showLegend"
+            [gradient]="gradient"
+            (legendLabelClick)="onLegendLabelClick($event)"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [showXAxisLabel]="false"
+            [showYAxisLabel]="false"
+            [xAxisTickFormatting]="calendarAxisTickFormatting"
+            [tooltipText]="calendarTooltipText"
+            [innerPadding]="innerPadding"
+            [tooltipDisabled]="tooltipDisabled"
+            (select)="select($event)">
+          </ngx-charts-heat-map>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Tree map</div>
+      <div class="card-block">
+        <div>
+          <ngx-charts-tree-map
+            class="chart-container"
+            (legendLabelClick)="onLegendLabelClick($event)"
+            [scheme]="colorScheme"
+            [results]="single"
+            [tooltipDisabled]="tooltipDisabled"
+            (select)="select($event)">
+          </ngx-charts-tree-map>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Number cards</div>
+      <div class="card-block">
+        <div>
+          <ngx-charts-number-card
+            class="chart-container"
+            (legendLabelClick)="onLegendLabelClick($event)"
+            [scheme]="colorScheme"
+            [results]="single"
+            (select)="select($event)">
+          </ngx-charts-number-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Gauge</div>
+      <div class="card-block">
+        <div>
+          <ngx-charts-gauge
+            class="chart-container"
+            [legend]="showLegend"
+            [results]="single"
+            [textValue]="gaugeTextValue"
+            [scheme]="colorScheme"
+            [min]="gaugeMin"
+            [max]="gaugeMax"
+            [units]="gaugeUnits"
+            [angleSpan]="gaugeAngleSpan"
+            [startAngle]="gaugeStartAngle"
+            [showAxis]="gaugeShowAxis"
+            [bigSegments]="gaugeLargeSegments"
+            [smallSegments]="gaugeSmallSegments"
+            [margin]="margin ? [marginTop, marginRight, marginBottom, marginLeft] : null"
+            [tooltipDisabled]="tooltipDisabled"
+            (select)="select($event)"
+            (legendLabelClick)="onLegendLabelClick($event)">
+          </ngx-charts-gauge>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Linear gauge</div>
+      <div class="card-block">
+        <div>
+          <ngx-charts-linear-gauge
+            class="chart-container"
+            [scheme]="colorScheme"
+            [min]="gaugeMin"
+            [max]="gaugeMax"
+            [value]="gaugeValue"
+            [previousValue]="gaugePreviousValue"
+            [units]="gaugeUnits"
+            (select)="select($event)">
+          </ngx-charts-linear-gauge>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

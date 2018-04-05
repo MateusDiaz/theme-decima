@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="media-grid col-lg-3 col-sm-6" *ngFor="let id of images">
+    <figure>
+      <img src="assets/images/unsplash/{{id}}.jpg" alt="Card image cap" class="img-fluid" />
+      <figcaption>
+        <h5 class="media-title fw-300">Media <strong>{{ id }}</strong></h5>
+        <p>
+          <a href="javascript:;" placement="left" ngbTooltip="Download"><i class="icon icon-basic-server-download"></i></a>
+          <a href="javascript:;" placement="left" ngbTooltip="Like"><i class="icon icon-basic-heart"></i></a>
+          <a href="javascript:;" placement="left" ngbTooltip="Share"><i class="icon icon-basic-share"></i></a>
+          <a href="javascript:;" placement="left" ngbTooltip="Bookmark"><i class="icon icon-basic-bookmark"></i></a>
+        </p>
+      </figcaption>     
+    </figure>
+  </div>
+</div>

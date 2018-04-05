@@ -1,0 +1,126 @@
+<ng-sidebar-container class="mh-100">
+  <ng-sidebar
+    [(opened)]="isOpened"
+    [mode]="isOver() ? 'over' : 'push'"
+    [position]="'left'"
+    [dockedSize]="'50px'"
+    [autoCollapseWidth]="'991'"
+    [closeOnClickOutside]="isOver() ? true : false"
+    [showBackdrop]="isOver() ? true : false"
+    [sidebarClass]="'email-panel'">
+    <div class="scroll-y">
+      <div (click)="onSelect(message)" *ngFor="let message of messages; let i = index" [class.selected]="message === selectedMessage" class="list-group-item list-group-item-action border-left-0 border-right-0 flex-column align-items-start">
+        <a class="d-flex b-b w-100" href="javascript:;">
+          <div class="mr-auto">
+            <div *ngIf="message.type" class="avatar-status bg-{{message.type}}">
+              <img alt="" class="avatar-sm rounded-circle" src="{{message.avatar}}"/>
+            </div>
+            <img *ngIf="!message.type" alt="" class="avatar-sm rounded-circle" src="{{message.avatar}}"/>
+          </div>
+          <div class="pl-3">
+            <div class="d-flex w-100 justify-content-between align-items-center">
+              <small class="bold ff-headers">
+                {{message.from}}
+              </small>
+              <small class="bold text-muted time">
+                {{ message.date | date: 'MMMM d, y' }}
+              </small>
+            </div>
+            <p class="mb-0">
+              {{message.subject}}
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </ng-sidebar>
+  <nav class="navbar custom-navbar">
+    <div class="nav navbar-nav">
+      <a (click)="toogleSidebar()" class="nav-link hidden-lg-up" href="javascript:;">
+        <i class="hamburger-icon">
+          <span></span>
+        </i>
+      </a>
+      <a class="nav-item nav-link active" href="javascript:;">
+        Reply
+      </a>
+      <a class="nav-item nav-link" href="javascript:;">
+        Forward
+      </a>
+      <a class="nav-item nav-link" href="javascript:;">
+        Flag
+      </a>
+      <a class="nav-item nav-link disabled" href="javascript:;">
+        Delete
+      </a>
+    </div>
+  </nav>
+  <div class="scroll-y pl-5 pr-5 pt-3 pb-3">
+    <div *ngIf="selectedMessage">
+      <div class="d-flex align-items-center mb-3">
+        <div class="mr-auto">
+          <img alt="" class="avatar-lg rounded-circle" src="{{selectedMessage.avatar}}"/>
+        </div>
+        <div class="pl-3">
+          <div class="date">
+            {{selectedMessage.date | date: 'fullDate'}}
+          </div>
+          <h4 class="lead mt-0">
+            {{selectedMessage.subject}}
+          </h4>
+          <p>
+            <b>
+              {{selectedMessage.from}}
+            </b>
+            to Jeff &amp; Suzzane
+          </p>
+        </div>
+      </div>
+      <div [innerHtml]="selectedMessage.body">
+      </div>
+    </div>
+    <div class="pt-3 pb-3">
+      <div class="toolbar" id="toolbar-toolbar">
+        <span class="ql-formats">
+          <select class="ql-font">
+            <option selected=""></option>
+            <option value="serif"></option>
+            <option value="monospace"></option>
+          </select>
+          <select class="ql-size">
+            <option value="small"></option>
+            <option selected=""></option>
+            <option value="large"></option>
+            <option value="huge"></option>
+          </select>
+        </span>
+        <span class="ql-formats">
+          <button class="ql-bold"></button>
+          <button class="ql-italic"></button>
+          <button class="ql-underline"></button>
+          <button class="ql-strike"></button>
+        </span>
+        <span class="ql-formats">
+          <select class="ql-color"></select>
+          <select class="ql-background"></select>
+        </span>
+        <span class="ql-formats">
+          <button class="ql-list" value="ordered"></button>
+          <button class="ql-list" value="bullet"></button>
+          <select class="ql-align">
+            <option selected=""></option>
+            <option value="center"></option>
+            <option value="right"></option>
+            <option value="justify"></option>
+          </select>
+        </span>
+        <span class="ql-formats">
+          <button class="ql-link"></button>
+          <button class="ql-image"></button>
+        </span>
+      </div>
+      <div id="editor-container">
+       </div>
+    </div>
+  </div>
+</ng-sidebar-container>

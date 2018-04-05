@@ -1,0 +1,128 @@
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Line chart</div>
+      <div class="card-block">
+        <div>
+          <ngx-charts-line-chart
+            class="chart-container"
+            [scheme]="colorScheme"
+            [schemeType]="schemeType"
+            [results]="dateDataWithOrWithoutRange"
+            [legend]="showLegend"
+            (legendLabelClick)="onLegendLabelClick($event)"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [autoScale]="autoScale"
+            [timeline]="timeline"
+            [showGridLines]="showGridLines"
+            [curve]="curve"
+            [rangeFillOpacity]="rangeFillOpacity"
+            [roundDomains]="roundDomains"
+            [tooltipDisabled]="true"
+            (select)="select($event)">
+          </ngx-charts-line-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Area chart</div>
+      <div class="card-block">
+        <div>
+          <ngx-charts-area-chart
+            class="chart-container"
+            [scheme]="colorScheme"
+            [schemeType]="schemeType"
+            [results]="dateData"
+            [legend]="showLegend"
+            (legendLabelClick)="onLegendLabelClick($event)"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [autoScale]="autoScale"
+            [timeline]="timeline"
+            [showGridLines]="showGridLines"
+            [roundDomains]="roundDomains"
+            [curve]="curve"
+            [tooltipDisabled]="tooltipDisabled"
+            (select)="select($event)">
+          </ngx-charts-area-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Stacked area chart</div>
+      <div class="card-block">
+        <div>
+          <ngx-charts-area-chart-stacked
+            class="chart-container"
+            [scheme]="colorScheme"
+            [schemeType]="schemeType"
+            [results]="dateData"
+            [legend]="showLegend"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            (legendLabelClick)="onLegendLabelClick($event)"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [timeline]="timeline"
+            [showGridLines]="showGridLines"
+            [roundDomains]="roundDomains"
+            [tooltipDisabled]="tooltipDisabled"
+            [curve]="curve"
+            (select)="select($event)">
+          </ngx-charts-area-chart-stacked>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Normalized area chart</div>
+      <div class="card-block">
+        <div>
+          <ngx-charts-area-chart-normalized
+            class="chart-container"
+            [scheme]="colorScheme"
+            [schemeType]="schemeType"
+            [results]="dateData"
+            [legend]="showLegend"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            (legendLabelClick)="onLegendLabelClick($event)"
+            [yAxis]="showYAxis"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [timeline]="timeline"
+            [showGridLines]="showGridLines"
+            [roundDomains]="roundDomains"
+            [tooltipDisabled]="tooltipDisabled"
+            [curve]="curve"
+            (select)="select($event)">
+          </ngx-charts-area-chart-normalized>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

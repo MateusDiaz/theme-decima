@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-header">Input text masks</div>
+  <div class="card-block">
+    <div class="form-group row" *ngFor="let choice of choices">
+      <label class="col-2 col-form-label">{{choice.name}}</label>
+      <div class="col-10">
+        <input class="form-control" type="text" placeholder="{{choice.placeholder}}" [textMask]="{mask: choice.mask}">
+      </div>
+    </div>
+  </div>
+</div>

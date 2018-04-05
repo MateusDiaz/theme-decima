@@ -1,0 +1,10 @@
+<input type="email" class="form-control mb-3" placeholder="Type to filter the name column..." required (keyup)='updateFilter($event)'>
+<ngx-datatable
+[columns]="columns"
+[columnMode]="'force'"
+[headerHeight]="40"
+[footerHeight]="50"
+[rowHeight]="'auto'"
+[limit]="10"
+[rows]='rows'>
+</ngx-datatable>

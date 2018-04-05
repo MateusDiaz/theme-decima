@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="media-tile media-tile-footer col-lg-3 col-sm-6" *ngFor="let id of images">
+    <figure>
+      <img src="assets/images/unsplash/{{id}}.jpg" alt="Card image cap" class="img-fluid" />
+      <figcaption>
+        <h6 class="media-title fw-300">{{ id }}</h6>
+        <small class="media-subtitle">Tile image {{ id }}</small>
+      </figcaption>     
+    </figure>
+  </div>
+</div>
+
+<div class="row">
+  <div class="media-tile media-tile-header col-lg-3 col-sm-6" *ngFor="let id of images2">
+    <figure>
+      <img src="assets/images/unsplash/{{id}}.jpg" alt="Card image cap" class="img-fluid" />
+      <figcaption>
+        <h6 class="media-title fw-300">{{ id }}</h6>
+        <small class="media-subtitle">Tile image {{ id }}</small>
+      </figcaption>     
+    </figure>
+  </div>
+</div>

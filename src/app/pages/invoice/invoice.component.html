@@ -1,0 +1,82 @@
+<div class="card">
+  <div class="card-block">
+    <img src="assets/images/logo.png" class="avatar-xs mb-3" alt="">
+
+    <div class="row mb-3">
+      <div class="col">
+        <h5><strong>Invoice #0001</strong></h5>
+        <p class="mb-0">Issued on 01 Jun 2016</p>
+        <p class="mb-0">Payment due by 31 May 2016</p>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <p class="mb-0">Company LLC</p>
+        <p class="mb-0">company@address.com</p>
+        <p class="mb-0">+012 345 678 90</p>
+      </div>
+    </div>
+
+    <div class="mt-5 mb-5">
+      <p class="mb-0"><strong>Client Details</strong></p>
+      <p class="mb-0">John Smith</p>
+      <p class="mb-0">1234 Main</p>
+      <p class="mb-0">Apt. 4B</p>
+      <p class="mb-0">Springfield, ST 54321</p>
+    </div>
+  </div>
+    <div class="table-responsive mb-5">
+      <table class="table table-hover mb-0 align-middle">
+        <thead class="thead-inverse">
+          <tr>
+            <th>Description</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of invoiceItems">
+            <td>
+              <strong>{{item.title}}</strong><br/>
+              <span class="text-muted">{{item.subtitle}}</span>
+            </td>
+            <td>{{item.price | currency:'USD':true:'1.2-2'}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{ (item.price * item.quantity) | currency:'USD':true:'1.2-2'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <div class="card-block">
+    
+    <div class="row mb-5">
+      <div class="col mt-1 mb-1">
+        <p class="text-uppercase m-0"><strong>Subtotal</strong></p>
+        <h3 class="m-0">{{getSubTotal() | currency:'USD':true:'1.2-2'}}</h3>
+      </div>
+      <div class="col mt-1 mb-1 text-sm-right text-md-left">
+        <p class="text-uppercase m-0"><strong>Tax (15%)</strong></p>
+        <h3 class="m-0">{{getCalculatedTax() | currency:'USD':true:'1.2-2'}}</h3>
+      </div>
+      <div class="col mt-1 mb-1">
+        <p class="text-uppercase m-0"><strong>Discount</strong></p>
+        <h3 class="m-0">$0.00</h3>
+      </div>
+      <div class="col mt-1 mb-1 text-xs-left text-sm-right">
+        <p class="text-uppercase m-0"><strong>Total</strong></p>
+        <h3 class="m-0 text-success">{{ getTotal() | currency:'USD':true:'1.2-2'}}</h3>
+      </div>
+    </div>
+
+    <small class="p-t-2">
+      <strong>
+        PAYMENT TERMS AND POLICIES
+      </strong>
+      All accounts are to be paid within 7 days from receipt of invoice. To be paid by cheque or credit card or direct payment online. If account is not paid within 7 days the credits details supplied as confirmation of work undertaken will be charged the agreed
+      quoted fee noted above. If the Invoice remails unpaid. our dept recovery agency, Urban, may charge you a fee of 25% of the unpaid portion of the
+      invoice amount and other legal and collection costs not covered by the fee.
+    </small>
+  </div>
+</div>

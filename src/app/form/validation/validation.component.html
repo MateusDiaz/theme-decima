@@ -1,0 +1,233 @@
+<div class="card">
+  <div class="card-header">Input text masks</div>
+  <div class="card-block">
+    <form class="form-horizontal" novalidate>
+
+      <div class="form-group row" [ngClass]="{'has-danger': requried?.errors?.required}">
+        <label class="col-2 col-form-label">Required</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="requried" #requried="ngModel" required  [ngClass]="{'form-control-danger': requried?.errors?.required}"/>
+          <div class="form-control-feedback" *ngIf="requried?.errors?.required">required error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': minlength?.errors?.minlength}">
+        <label class="col-2 col-form-label">minlength</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="minlength" #minlength="ngModel" minlength="5"  [ngClass]="{'form-control-danger': minlength?.errors?.minlength}"/>
+          <div class="form-control-feedback" *ngIf="minlength?.errors?.minlength">minlength error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': maxlength?.errors?.maxlength}">
+        <label class="col-2 col-form-label">maxlength</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="maxlength" #maxlength="ngModel" maxlength="5"  [ngClass]="{'form-control-danger': maxlength?.errors?.maxlength}"/>
+          <div class="form-control-feedback" *ngIf="maxlength?.errors?.maxlength">maxlength error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': pattern?.errors?.pattern}">
+        <label class="col-2 col-form-label">pattern</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="pattern" #pattern="ngModel" pattern="[a-z]{6}" [ngClass]="{'form-control-danger': pattern?.errors?.pattern}"/>
+          <div class="form-control-feedback" *ngIf="pattern?.errors?.pattern">pattern error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': base64?.errors?.base64}">
+        <label class="col-2 col-form-label">base64</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="base64" #base64="ngModel" base64 [ngClass]="{'form-control-danger': base64?.errors?.base64}"/>
+          <div class="form-control-feedback" *ngIf="base64?.errors?.base64">base64 error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': creditCard?.errors?.creditCard}">
+        <label class="col-2 col-form-label">creditCard</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="creditCard" #creditCard="ngModel" creditCard [ngClass]="{'form-control-danger': creditCard?.errors?.creditCard}"/>
+          <div class="form-control-feedback" *ngIf="creditCard?.errors?.creditCard">creditCard error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': date?.errors?.date}">
+        <label class="col-2 col-form-label">date</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="date" #date="ngModel" date [ngClass]="{'form-control-danger': date?.errors?.date}"/>
+          <div class="form-control-feedback" *ngIf="date?.errors?.date">date error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': dateISO?.errors?.dateISO}">
+        <label class="col-2 col-form-label">dateISO</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="dateISO" #dateISO="ngModel" dateISO [ngClass]="{'form-control-danger': dateISO?.errors?.dateISO}"/>
+          <div class="form-control-feedback" *ngIf="dateISO?.errors?.dateISO">dateISO error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': maxDate?.errors?.maxDate}">
+        <label class="col-2 col-form-label">maxDate</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="maxDate" #maxDate="ngModel" maxDate="2016-12-12" [ngClass]="{'form-control-danger': maxDate?.errors?.maxDate}"/>
+          <div class="form-control-feedback" *ngIf="maxDate?.errors?.maxDate">maxDate error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': minDate?.errors?.minDate}">
+        <label class="col-2 col-form-label">minDate</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="minDate" #minDate="ngModel" minDate="2016-12-12" [ngClass]="{'form-control-danger': minDate?.errors?.minDate}"/>
+          <div class="form-control-feedback" *ngIf="minDate?.errors?.minDate">minDate error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': digits?.errors?.digits}">
+        <label class="col-2 col-form-label">digits</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="digits" #digits="ngModel" digits [ngClass]="{'form-control-danger': digits?.errors?.digits}"/>
+          <div class="form-control-feedback" *ngIf="digits?.errors?.digits">digits error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': email?.errors?.email}">
+        <label class="col-2 col-form-label">email</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="email" #email="ngModel" email [ngClass]="{'form-control-danger': email?.errors?.email}"/>
+          <div class="form-control-feedback" *ngIf="email?.errors?.email">email error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': equal?.errors?.equal}">
+        <label class="col-2 col-form-label">equal</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="equal" #equal="ngModel" equal="aabbcc" [ngClass]="{'form-control-danger': equal?.errors?.equal}"/>
+          <div class="form-control-feedback" *ngIf="equal?.errors?.equal">equal error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': notEqual?.errors?.notEqual}">
+        <label class="col-2 col-form-label">notEqual</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="notEqual" #notEqual="ngModel" notEqual="aabbcc" [ngClass]="{'form-control-danger': notEqual?.errors?.notEqual}"/>
+          <div class="form-control-feedback" *ngIf="notEqual?.errors?.notEqual">notEqual error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': equalTo?.errors?.equalTo}">
+        <label class="col-2 col-form-label">equalTo</label>
+        <div class="col-10">
+          <input class="form-control mb-3" type="text" ngModel name="password" #password="ngModel"/>
+          <input class="form-control" type="text" ngModel name="equalTo" #equalTo="ngModel" [equalTo]="password" [ngClass]="{'form-control-danger': equalTo?.errors?.equalTo}"/>
+          <div class="form-control-feedback" *ngIf="equalTo?.errors?.equalTo">equalTo error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': notEqualTo?.errors?.notEqualTo}">
+        <label class="col-2 col-form-label">notEqualTo</label>
+        <div class="col-10">
+          <input class="form-control mb-3" type="text" ngModel name="oldPassword" #oldPassword="ngModel"/>
+          <input class="form-control" type="text" ngModel name="notEqualTo" #notEqualTo="ngModel" [notEqualTo]="oldPassword" [ngClass]="{'form-control-danger': notEqualTo?.errors?.notEqualTo}"/>
+          <div class="form-control-feedback" *ngIf="notEqualTo?.errors?.notEqualTo">notEqualTo error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': gt?.errors?.gt}">
+        <label class="col-2 col-form-label">greater than</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="gt" #gt="ngModel" gt="10" [ngClass]="{'form-control-danger': gt?.errors?.gt}"/>
+          <div class="form-control-feedback" *ngIf="gt?.errors?.gt">greater than error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': lt?.errors?.lt}">
+        <label class="col-2 col-form-label">less than</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="lt" #lt="ngModel" lt="5" [ngClass]="{'form-control-danger': lt?.errors?.lt}"/>
+          <div class="form-control-feedback" *ngIf="lt?.errors?.lt">less than error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': lt?.errors?.lt}">
+        <label class="col-2 col-form-label">less than</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="lt" #lt="ngModel" lt="5" [ngClass]="{'form-control-danger': lt?.errors?.lt}"/>
+          <div class="form-control-feedback" *ngIf="lt?.errors?.lt">less than error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': json?.errors?.json}">
+        <label class="col-2 col-form-label">json</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="json" #json="ngModel" json [ngClass]="{'form-control-danger': json?.errors?.json}"/>
+          <div class="form-control-feedback" *ngIf="json?.errors?.json">json error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': max?.errors?.max}">
+        <label class="col-2 col-form-label">max</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="max" #max="ngModel" max="5" [ngClass]="{'form-control-danger': max?.errors?.max}"/>
+          <div class="form-control-feedback" *ngIf="max?.errors?.max">max error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': min?.errors?.min}">
+        <label class="col-2 col-form-label">min</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="min" #min="ngModel" min="5" [ngClass]="{'form-control-danger': min?.errors?.min}"/>
+          <div class="form-control-feedback" *ngIf="min?.errors?.min">min error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': number?.errors?.number}">
+        <label class="col-2 col-form-label">number</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="number" #number="ngModel" number [ngClass]="{'form-control-danger': number?.errors?.number}"/>
+          <div class="form-control-feedback" *ngIf="number?.errors?.number">number error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': phone?.errors?.phone}">
+        <label class="col-2 col-form-label">phone</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="phone" #phone="ngModel" phone [ngClass]="{'form-control-danger': phone?.errors?.phone}"/>
+          <div class="form-control-feedback" *ngIf="phone?.errors?.phone">phone error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': range?.errors?.range}">
+        <label class="col-2 col-form-label">range</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="range" #range="ngModel" [range]="[4,9]" [ngClass]="{'form-control-danger': range?.errors?.range}"/>
+          <div class="form-control-feedback" *ngIf="range?.errors?.range">range error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': rangeLength?.errors?.rangeLength}">
+        <label class="col-2 col-form-label">rangeLength</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="rangeLength" #rangeLength="ngModel" [rangeLength]="[4,9]" [ngClass]="{'form-control-danger': rangeLength?.errors?.rangeLength}"/>
+          <div class="form-control-feedback" *ngIf="rangeLength?.errors?.rangeLength">rangeLength error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': url?.errors?.url}">
+        <label class="col-2 col-form-label">url</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="url" #url="ngModel" url [ngClass]="{'form-control-danger': url?.errors?.url}"/>
+          <div class="form-control-feedback" *ngIf="url?.errors?.url">url error</div>
+        </div>
+      </div>
+
+      <div class="form-group row" [ngClass]="{'has-danger': uuid?.errors?.uuid}">
+        <label class="col-2 col-form-label">uuid</label>
+        <div class="col-10">
+          <input class="form-control" type="text" ngModel name="uuid" #uuid="ngModel" uuid="3" [ngClass]="{'form-control-danger': uuid?.errors?.uuid}"/>
+          <div class="form-control-feedback" *ngIf="uuid?.errors?.uuid">uuid error</div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
